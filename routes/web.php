@@ -34,9 +34,10 @@ Route::get('/modul_member/memberr',[MemberController::class,'form_cari']);
 Route::get('file-upload',[MemberController::class,'file_upload']); 
 Route::get('/modul_member/member/get_data/{id}',[MemberController::class,'get_by_id']); 
 Route::post('/modul_member/member/login',[MemberController::class,'api_login'])->name('/modul_member/member/login'); 
+Route::post('/login',[MemberController::class,'login'])->name('/login'); 
 Route::post('/modul_member/user/add',[MemberController::class,'add_member'])->name('/modul_member/user/add'); 
 Route::post('file.upload',[MemberController::class,'excel_upload'])->name('file.upload'); 
 Route::post('upload/member',[MemberController::class,'excel_upload_ajax'])->name('upload/member'); 
 Route::get('/token', function () {
         return csrf_token(); 
-    });
+    }); 
